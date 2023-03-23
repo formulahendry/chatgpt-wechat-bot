@@ -31,16 +31,22 @@ export async function processMessage(msg) {
             listenerName = alias || listener.name();
         }
         text = text.replace(`@${listenerName}`, '');
+
+        if (text === "ping") {
+            await room.say(`ping received`);
+            return;
+        }
+
         console.log(`group content: ${text}`);
         if (text) {
             text = text.trim();
             const reply = await getChatGPTReply(text)
-            room.say(reply);
+            await room.say(reply);
         }
     }
 
     if (!room) {
         const reply = await getChatGPTReply(text)
-        talker.say(reply);
+        await talker.say(reply);
     }
 }

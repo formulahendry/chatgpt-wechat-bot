@@ -15,16 +15,20 @@ const api = new ChatGPTAPI({
  * @returns {string}
  */
 export async function getChatGPTReply(prompt) {
-    console.log('🚀🚀🚀 /prompt: ', prompt)
+    try {
+        console.log('🚀🚀🚀 /prompt: ', prompt)
 
-    const response = await api.sendMessage(prompt, {
-        parentMessageId
-    });
-    const reply = response.text
+        const response = await api.sendMessage(prompt, {
+            parentMessageId
+        });
+        const reply = response.text
 
-    parentMessageId = response.id;
+        parentMessageId = response.id;
 
-    console.log('🚀🚀🚀 /reply: ', reply)
+        console.log('🚀🚀🚀 /reply: ', reply)
 
-    return `${reply}\n\n${viaChatGPT}`;
+        return `${reply}\n\n${viaChatGPT}`;
+    } catch (error) {
+        return "发生了一些错误，请稍后再试：\n" + error;
+    }
 }
