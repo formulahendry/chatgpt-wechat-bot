@@ -46,7 +46,7 @@ const bot = WechatyBuilder.build({
     name: 'chatgpt-bot',
     puppet: "wechaty-puppet-wechat",
     puppetOptions: {
-        uos: true
+        uos: true // 开启 UOS 协议
     }
 })
 

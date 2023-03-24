@@ -19,6 +19,10 @@ export async function processMessage(msg) {
         return;
     }
 
+    if (msg.self()) {
+        return;
+    }
+
     if (text.includes(viaChatGPT)) {
         return;
     }
