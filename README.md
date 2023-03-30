@@ -29,3 +29,9 @@
     ![扫描二维码](./images/qr.jpg)
 
 1. 登录成功后，就可以私聊或者在微信群@登录微信号进行互动了。
+
+## 参考
+
+* [手把手带你搭建 ChatGPT 微信机器人！](https://mp.weixin.qq.com/s/IueBsSX58hwySEc45OxkOQ)
+* [把 ChatGPT 微信机器人一键部署到免费服务器！](https://mp.weixin.qq.com/s/tNGl7VdDBWNVFjeCwlzWUw)
+* [ChatGPT 微信机器人原理解析（一）：如何接入 ChatGPT API](https://mp.weixin.qq.com/s/KfDTHveO6dIpT4j3q47UNA)
